@@ -8,7 +8,7 @@
     "my-node-cli": "./index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx tsc"
   },
   "repository": {
     "type": "git",
@@ -24,5 +24,8 @@
   "dependencies": {
     "chalk": "^5.4.1",
     "commander": "^13.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.2"
   }
 }

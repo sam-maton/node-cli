@@ -13,7 +13,7 @@ program.version('1.0.0')
   getWeatherData(options.city, options.apikey);
 });
 
-async function getWeatherData (city, apiKey){
+async function getWeatherData (city: string, apiKey: string){
   if(!city || !apiKey){
     console.log(chalk.red("Please provide a city and an API key"));
     return;
@@ -31,12 +31,16 @@ async function getWeatherData (city, apiKey){
     printResponse(json);
 
   } catch (error) {
-    console.log(chalk.red('An error occurred while fetching the weather data. ' + error.message));
+    let message = "Unknown error"
+    if(error instanceof Error){
+      message = error.message;
+    }
+    console.log(chalk.red('An error occurred while fetching the weather data. ' + message));
   }
   
 }
 
-function printResponse(weatherData){
+function printResponse(weatherData: any){
   console.log(chalk.green(`${weatherData.location.name}: ${weatherData.current.temp_c}°C and ${weatherData.current.condition.text}`));
 }
 
