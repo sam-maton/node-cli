@@ -1,7 +1,10 @@
 import { program } from 'commander';
 import chalk from 'chalk';
+import figlet from 'figlet'
 
 const baseURL = "http://api.weatherapi.com/v1/forecast.json"
+
+console.log(figlet.textSync("Weather CLI"));
 
 program.version('1.0.0')
 .description("My Node CLI")

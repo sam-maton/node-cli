@@ -23,9 +23,11 @@
   "homepage": "https://github.com/sam-maton/node-cli#readme",
   "dependencies": {
     "chalk": "^5.4.1",
-    "commander": "^13.1.0"
+    "commander": "^13.1.0",
+    "figlet": "^1.8.0"
   },
   "devDependencies": {
+    "@types/figlet": "^1.7.0",
     "@types/node": "^22.13.2"
   }
 }
